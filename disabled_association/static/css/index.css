@@ -1,0 +1,321 @@
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #007bff; /* Background color for the header */
+    color: #fff; /* Text color for the header */
+    padding: 10px 0; /* Add padding to the top and bottom */
+}
+
+/* Style the logo */
+.logo {
+    display: block;
+    max-width: 150px; /* Adjust the maximum width of your logo */
+    height: auto;
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* Style the navigation menu */
+nav {
+    display: flex;
+    justify-content: space-between; /* Align logo and menu items */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Set a maximum width for the header content */
+    margin: 0 auto; /* Center the header horizontally */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    display: flex; /* Display menu items in a row */
+}
+
+li {
+    margin-right: 20px; /* Add spacing between menu items */
+}
+
+a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Text color for menu items */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px 15px; /* Add padding to buttons */
+    border-radius: 5px; /* Round corners of buttons */
+    transition: background-color 0.3s, color 0.3s; /* Add transition effect to buttons */
+}
+
+/* Style for hover effect on menu items */
+a:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Add your additional styles here */
+
+/* Reset some default styles */
+body, h1, h2, p, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Font Awesome Icon Styles */
+.fab {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Featured Projects Section */
+.featured-projects {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+}
+
+/* Project Card */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Separate project cards with spacing */
+.project-card {
+    margin-bottom: 20px; /* Add margin to the bottom of each project card */
+    border: 1px solid #ccc; /* Add a border for better separation (optional) */
+    padding: 20px; /* Add padding for content within each card (optional) */
+}
+
+/* Adjust the spacing for smaller screens */
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+}
+
+
+/* Project Image */
+.project-image {
+    max-width: 100%;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.project-title,
+.project-description,
+.project-date,
+.project-location {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.project-description {
+    color: #666;
+}
+
+.project-date,
+.project-location {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Newsletter Signup Section */
+.newsletter-signup {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Newsletter Signup Heading */
+.newsletter-signup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Newsletter Signup Paragraph */
+.newsletter-signup p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Email Input Field */
+.newsletter-signup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Signup Button */
+.newsletter-signup button {
+    background-color: #FF5733;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the Signup Button */
+.newsletter-signup button:hover {
+    background-color: #E64A2E;
+}
+
+/* Success Message (optional) */
+.success-message {
+    color: green;
+    margin-top: 10px;
+    font-weight: bold;
+    display: none;
+}
+
+/* Project Image */
+.image-display {
+    max-width: 50%;
+    border-radius: 8px;
+    width: 100%;
+    height: auto; /* This ensures the image maintains its aspect ratio */
+}
+
+/* Fixed Header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Beautify your web page with enhanced CSS styles */
+
+/* Apply a background color and text color to the hero section */
+.hero {
+    background-color: #f7f7f7; /* Light background color */
+    color: #333; /* Dark text color */
+    padding: 30px;
+}
+
+/* Increase line-height between headings and text */
+h2, h3 {
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+/* Style member testimonials */
+.member-testimonials {
+    margin-top: 20px;
+}
+
+.testimonial {
+    background-color: #eeecec;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd; /* Softer border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style footer */
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px 0;
+    text-align: center; /* Center align text */
+}
+
+/* Style links in the footer */
+footer a {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    margin: 0 10px; /* Spacing between links */
+}
+
+/* On hover, change the color and add a subtle underline to links in the footer */
+footer a:hover {
+    color: #ff5722; /* Highlight color */
+    text-decoration: underline;
+}
+
+/* Style buttons */
+.cta-button {
+    background-color: #ff5722; /* Orange button color */
+    color: #fff; /* White text color */
+    padding: 12px 24px; /* Larger padding */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* Add subtle transitions */
+}
+
+/* On hover, change the button color and add a slight scale effect */
+.cta-button:hover {
+    background-color: #ff7043; /* Lighter orange */
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Additional styles for header navigation links */
+nav ul li {
+    margin-right: 20px; /* Spacing between navigation items */
+}
+
+/* You can continue to add more styles and customize colors to your preference */

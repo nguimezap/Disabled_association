@@ -1,0 +1,165 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter</title>
+    <!-- Load Font Awesome locally -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+dtBCRzF9pSXn0KgF0L5BZr5r5F5kT9GvaYTJp2f9g5ZxL9T" crossorigin="anonymous">
+    <style>
+        /* Add styles for the fixed header */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 100px; /* Adjust logo size for mobile */
+            }
+            nav ul {
+                flex-direction: column; /* Stack menu items vertically on mobile */
+            }
+        }
+
+        /* Add your custom styles for the "Nous Contacter" page */
+        .nous-contacter {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nous-contacter h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .nous-contacter p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles (Same as the previous examples) */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footer-info {
+            margin-bottom: 10px;
+        }
+
+        .footer-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'images/logo1.png' %}" alt="checklist" class="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/qui-sommes-nous/">Qui sommes-nous?</a></li>
+                <li><a href="/actualites/">Actualités</a></li>
+                <li><a href="/evenements/">Evennements</a></li>
+                <li><a href="/faire-un-don/">Faire Un Don</a></li>
+                <li><a href="/contact/" class="active">Nous Contacter</a></li>
+                <li><a href="/carriere/">Carrière</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="nous-contacter">
+            <h1>Nous Contacter</h1> <br>
+            <p>Si vous avez des questions, des commentaires ou si vous souhaitez nous contacter, veuillez utiliser le formulaire ci-dessous. Nous vous répondrons dès que possible.</p>
+            
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <label for="nom">Nom complet :</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom complet" required>
+                
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" placeholder="Laissez votre message ici" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2023 A.N.I.P.S.H-CAM. Tous droits réservés.</p>
+            <p><a href="/privacy-policy/">Politique de confidentialité</a> | <a href="/terms-of-service/">Conditions d'utilisation</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'path-to-your-local-fontawesome.min.css' %}">
+    <style>
+        /* Add custom styles for the Événements page */
+        .events-page {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .events-page h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .events-page p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Add styles for event cards */
+        .event-card {
+            margin-bottom: 30px;
+        }
+
+        .event-card h3 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .event-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Add custom styles for the header */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #007bff; /* Background color for the fixed header */
+            color: #fff; /* Text color for the fixed header */
+            padding: 10px 0; /* Add padding to the top and bottom */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'images/logo1.png' %}" alt="checklist" class="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/qui-sommes-nous/">Qui sommes-nous?</a></li>
+                <li><a href="/actualites/">Actualités</a></li>
+                <li><a href="/evenements/">Événements</a></li>
+                <li><a href="/faire-un-don/">Faire Un Don</a></li>
+                <li><a href="/contact/">Nous Contacter</a></li>
+                <li><a href="/carriere/">Carrière</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="events-page">
+            <h2>Événements</h2>
+            
+            <!-- Event Card 1 -->
+            <div class="event-card">
+                <h3>Événement 1</h3>
+                <p>Date de l'événement 1</p>
+                <p>Lieu de l'événement 1</p>
+                <p>Description de l'événement 1. Vous pouvez ajouter des détails sur l'événement ici.</p>
+            </div>
+
+            <section class="featured-projects">
+                <div class="project-card">
+                    <img src="{% static 'images/IMG_1.jpg' %}" alt="Project Image" class="project-image">
+                    <div class="project-details">
+                        <h2 class="project-title">CATCH-UP: Initiation à l'Informatique et la Bureautique</h2>
+                        <p class="project-description">Cet événement est un rattrapage de la formation d'initiation à l'informatique qui formera les personnes en situation de handicape aux bases de l'informatique, aux outils techniques, aux moteurs de recherche et à la navigation sur Internet.</p>
+                        <p class="project-date">Date : 15 Mai 2024</p>
+                        <p class="project-location">Lieu : Lycée Technique de Yaoundé</p>
+                        <a href="{% url 'register_event' %}" class="cta-button">S'inscrire maintenant</a>
+    
+                    </div>
+                </div>
+            
+                <div class="project-card">
+                    <img src="{% static 'images/IMG_3.jpg' %}" alt="Project Image" class="project-image">
+                    <div class="project-details">
+                        <h2 class="project-title">Webinaire sur l'accessibilité numérique</h2>
+                        <p class="project-description">Participez à notre webinaire interactif où des experts discuteront des meilleures pratiques pour rendre le contenu numérique accessible à tous.</p>
+                        <p class="project-date">Date : 10 Juillet 2024</p>
+                        <p class="project-location">En ligne</p>
+                        <a href="{% url 'register_event' %}" class="cta-button">S'inscrire maintenant</a>
+                    </div>
+                </div>
+            
+                <div class="project-card">
+                    <img src="{% static 'images/IMG_4.jpg' %}" alt="Project Image" class="project-image">
+                    <div class="project-details">
+                        <h2 class="project-title">Formation sur l'utilisation des technologies d'assistance</h2>
+                        <p class="project-description">Découvrez comment les technologies d'assistance peuvent améliorer la vie quotidienne des personnes en situation de handicap. Formation gratuite pour tous.</p>
+                        <p class="project-date">Date : 5 Août 2024</p>
+                        <p class="project-location">Lieu : Centre de Réadaptation de Yaoundé</p>
+                        <a href="{% url 'register_event' %}" class="cta-button">S'inscrire maintenant</a>
+                    </div>
+                </div>
+            
+                <div class="project-card">
+                    <img src="{% static 'images/IMG_5.jpg' %}" alt="Project Image" class="project-image">
+                    <div class="project-details">
+                        <h2 class="project-title">Conférence sur l'accessibilité des sites web</h2>
+                        <p class="project-description">Rejoignez-nous pour une conférence informative sur la création de sites web accessibles et conformes aux normes d'accessibilité.</p>
+                        <p class="project-date">Date : 20 Septembre 2024</p>
+                        <p class="project-location">Lieu : Salle de conférence de ANIPSH-CAM</p>
+                        <a href="{% url 'register_event' %}" class="cta-button">S'inscrire maintenant</a>
+                    </div>
+                </div>
+            
+                <!-- Add more project cards as needed -->
+            </section>
+
+            <!-- Repeat event cards as needed for additional events -->
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2023 O.N.I.P.S.H-CAM. Tous droits réservés.</p>
+            <p><a href="/privacy-policy/">Politique de confidentialité</a> | <a href="/terms-of-service/">Conditions d'utilisation</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        });
+    </script>
+</body>
+</html>

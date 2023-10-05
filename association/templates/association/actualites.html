@@ -1,0 +1,132 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+dtBCRzF9pSXn0KgF0L5BZr5r5F5kT9GvaYTJp2f9g5ZxL9T" crossorigin="anonymous">
+    <style>
+        /* Add custom styles for the Actualités page */
+        .news-page {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-page h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .news-page p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Add styles for news articles */
+        .news-article {
+            margin-bottom: 30px;
+        }
+
+        .news-article h3 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .news-article p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'images/logo1.png' %}" alt="checklist" class="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/qui-sommes-nous/">Qui sommes-nous?</a></li>
+                <li><a href="/actualites/">Actualités</a></li>
+                <li><a href="/evenements/">Evennements</a></li>
+                <li><a href="/faire-un-don/">Faire Un Don</a></li>
+                <li><a href="/contact/">Nous Contacter</a></li>
+                <li><a href="/carriere/">Carrière</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="news-page">
+            <h2>Actualités</h2>
+            
+            <!-- News Article 1 -->
+            <div class="news-article">
+                <h3>Titre de l'article 1</h3>
+                <p>Date de publication : 1er Octobre 2023</p>
+                <p>Ceci est un résumé de l'article 1. Vous pouvez ajouter des détails sur l'événement ou la nouvelle ici.</p>
+                <a href="#" class="cta-button">Lire la suite</a>
+            </div>
+            
+            <!-- News Article 2 -->
+            <div class="news-article">
+                <h3>Titre de l'article 2</h3>
+                <p>Date de publication : 15 Septembre 2023</p>
+                <p>Ceci est un résumé de l'article 2. Vous pouvez ajouter des détails sur l'événement ou la nouvelle ici.</p>
+                <a href="#" class="cta-button">Lire la suite</a>
+            </div>
+
+            <!-- News Article 2 -->
+            <div class="news-article">
+                <h3>Titre de l'article 2</h3>
+                <p>Date de publication : 15 Septembre 2023</p>
+                <p>Ceci est un résumé de l'article 2. Vous pouvez ajouter des détails sur l'événement ou la nouvelle ici.</p>
+                <a href="#" class="cta-button">Lire la suite</a>
+            </div>
+
+            <!-- News Article 3 -->
+            <div class="news-article">
+                <h3>Titre de l'article 3</h3>
+                <p>Date de publication : 15 Septembre 2023</p>
+                <p>Ceci est un résumé de l'article 2. Vous pouvez ajouter des détails sur l'événement ou la nouvelle ici.</p>
+                <a href="#" class="cta-button">Lire la suite</a>
+            </div>
+
+            <!-- News Article 4 -->
+            <div class="news-article">
+                <h3>Titre de l'article 4</h3>
+                <p>Date de publication : 15 Septembre 2023</p>
+                <p>Ceci est un résumé de l'article 2. Vous pouvez ajouter des détails sur l'événement ou la nouvelle ici.</p>
+                <a href="#" class="cta-button">Lire la suite</a>
+            </div>
+            
+            <!-- Add more news articles as needed -->
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2023 A.N.I.P.S.H-CAM. Tous droits réservés.</p>
+            <p><a href="/privacy-policy/">Politique de confidentialité</a> | <a href="/terms-of-service/">Conditions d'utilisation</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        });
+    </script>
+</body>
+</html>

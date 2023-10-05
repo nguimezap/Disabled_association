@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrière</title>
+    <!-- Load Font Awesome locally -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+dtBCRzF9pSXn0KgF0L5BZr5r5F5kT9GvaYTJp2f9g5ZxL9T" crossorigin="anonymous">
+    <style>
+        /* Add styles for the fixed header */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 100px; /* Adjust logo size for mobile */
+            }
+            nav ul {
+                flex-direction: column; /* Stack menu items vertically on mobile */
+            }
+        }
+
+        /* Add your custom styles for the "Carrière" page */
+        .carriere {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carriere h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .carriere p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles (Same as the previous examples) */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footer-info {
+            margin-bottom: 10px;
+        }
+
+        .footer-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'images/logo1.png' %}" alt="checklist" class="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/qui-sommes-nous/">Qui sommes-nous?</a></li>
+                <li><a href="/actualites/">Actualités</a></li>
+                <li><a href="/evenements/">Evennements</a></li>
+                <li><a href="/faire-un-don/">Faire Un Don</a></li>
+                <li><a href="/contact/">Nous Contacter</a></li>
+                <li><a href="/carriere/" class="active">Carrière</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carriere">
+            <h1>Carrière</h1> <br>
+            <p>Explorez les opportunités de carrière passionnantes au sein de notre organisation. Nous sommes toujours à la recherche de talents exceptionnels pour rejoindre notre équipe.</p>
+        
+            <h2>Offres d'Emploi</h2> <br>
+            <p>Nous avons actuellement les postes suivants ouverts :</p>
+            <ul>
+                <li><strong>Ingénieur en informatique</strong>: Vous serez responsable du développement de logiciels innovants pour soutenir notre mission.</li>
+                <li><strong>Spécialiste des médias sociaux</strong>: Aidez-nous à développer notre présence en ligne en gérant nos comptes de médias sociaux et en créant du contenu engageant.</li>
+                <li><strong>Responsable des ressources humaines</strong>: Contribuez à la croissance de notre équipe en gérant les processus de recrutement et de gestion des ressources humaines.</li>
+            </ul> <br>
+        
+            <h2>Comment Postuler</h2> <br>
+            <p>Si l'un de ces postes vous intéresse, veuillez nous envoyer votre CV et une lettre de motivation à l'adresse email suivante : <a href="mailto:recrutement@anipshcam.org">recrutement@anipshcam.org</a>.</p>
+            
+            <p>Nous attendons avec impatience de découvrir vos talents et de travailler ensemble pour soutenir notre mission d'inclusion des personnes en situation de handicap.</p>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2023 A.N.I.P.S.H-CAM. Tous droits réservés.</p>
+            <p><a href="/privacy-policy/">Politique de confidentialité</a> | <a href="/terms-of-service/">Conditions d'utilisation</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        });
+    </script>
+</body>
+</html>

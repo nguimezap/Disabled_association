@@ -1,0 +1,223 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description goes here.">
+    <meta name="keywords" content="your, keywords, go, here">
+    <title>ANIPSH-CAM</title>
+    <!-- Load Font Awesome locally -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+dtBCRzF9pSXn0KgF0L5BZr5r5F5kT9GvaYTJp2f9g5ZxL9T" crossorigin="anonymous">
+    <style>
+        /* Add styles for the fixed header */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 100px; /* Adjust logo size for mobile */
+            }
+            nav ul {
+                flex-direction: column; /* Stack menu items vertically on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{% static 'images/logo1.png' %}" alt="checklist" class="logo">
+            <ul>
+                <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+                <li><a href="/qui-sommes-nous/">Qui sommes-nous?</a></li>
+                <li><a href="{% url 'actualites' %}">Actualités</a></li>
+                <li><a href="/evenements/">Evennements</a></li>
+                <li><a href="/faire-un-don/">Faire Un Don</a></li>
+                <li><a href="/contact/">Nous Contacter</a></li>
+                <li><a href="/carriere/">Carrière</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Bienvenue sur la page de A.N.I.P.S.H-CAM</h1> <br>
+            <p>ASSOCIATION NUMERIQUE ET INCLUSIVE DES PERSONNES EN SITUATION DE HANDICAP DU CAMEROUN « A.N.I.P.S.H-CAM ».</p> <br>
+            <a href="/qui-sommes-nous/" class="cta-button">En savoir plus</a>
+        </section>
+
+        <br>
+
+
+            <h2>À Propos de Notre Mission</h2>
+        <section class="about-mission">
+            <p>Nous sommes fiers de notre mission qui vise à transformer la vie des personnes en situation de handicap à travers la technologie. Notre engagement envers l'inclusion numérique est au cœur de tout ce que nous faisons.</p>
+            <p>Grâce à nos initiatives éducatives, nos programmes de sensibilisation et nos événements communautaires, nous créons un avenir où le handicap n'est pas un obstacle à l'accès à l'information, à l'éducation et à l'emploi.</p>
+            <p>Rejoignez-nous dans notre quête pour un monde plus inclusif et numériquement accessible pour tous.</p>
+        </section> <br>
+
+
+            <h2>Notre Impact</h2>
+        <section class="our-impact">
+            <p>Nous sommes fiers de l'impact que nous avons eu sur la vie des personnes en situation de handicap au Cameroun et au-delà. Depuis notre création, nous avons travaillé sans relâche pour promouvoir l'inclusion numérique et améliorer l'accès à la technologie.</p> <br>
+
+            <p>Nos réalisations comprennent :</p> <br>
+            
+            <p>La formation de milliers de personnes en situation de handicap aux compétences numériques essentielles.</p>
+            <p>La création de partenariats avec des écoles et des institutions pour rendre l'éducation plus accessible.</p>
+            <p>L'organisation d'événements qui ont sensibilisé des milliers de personnes à l'importance de l'inclusion numérique.</p>
+            <p>La création d'applications et de ressources technologiques accessibles.</p>
+
+            <p>Nous sommes déterminés à poursuivre notre travail afin de créer un monde où chaque individu, quelle que soit sa situation de handicap, peut réaliser son plein potentiel grâce à la technologie.</p> <br>
+        </section>
+
+
+
+        <h2>Nos Initiatives</h2>
+        <section class="our-initiatives">
+            <p>Nos initiatives sont au cœur de notre engagement envers l'inclusion numérique. Chacune de nos actions est conçue pour apporter des changements positifs et durables dans la vie des personnes en situation de handicap.</p>
+    
+            <h3>1. Programme d'Éducation Numérique</h3>
+            <p>Notre programme d'éducation numérique offre des cours en ligne gratuits aux personnes en situation de handicap. Nous couvrons une variété de sujets, notamment l'informatique, la programmation, la conception Web et bien plus encore. Notre objectif est d'armer nos apprenants avec les compétences nécessaires pour réussir dans l'ère numérique.</p>
+    
+            <h3>2. Campagnes de Sensibilisation</h3>
+            <p>Nos campagnes de sensibilisation visent à éduquer le public sur les défis auxquels sont confrontées les personnes en situation de handicap en matière d'accès numérique. Nous croyons que la sensibilisation est le premier pas vers le changement, et nous travaillons avec dévouement pour éliminer les barrières.</p>
+    
+            <h3>3. Projets Technologiques</h3>
+            <p>Nous collaborons avec des développeurs et des designers talentueux pour créer des applications et des outils technologiques accessibles. Ces projets visent à améliorer la qualité de vie des personnes en situation de handicap en fournissant des solutions innovantes.</p>
+    
+            <p>Nous sommes fiers de l'impact que ces initiatives ont eu sur notre communauté, mais notre travail n'est pas terminé. Nous continuons à innover et à étendre nos efforts pour rendre le monde numérique plus inclusif pour tous.</p>
+        </section> <br>
+
+
+        <h2>Témoignages de Membres</h2>
+        <section class="member-testimonials">
+            <p>Nos membres sont le cœur de notre communauté, et leurs témoignages reflètent l'impact positif que nous avons sur leurs vies. Voici quelques-unes de leurs expériences :</p>
+    
+            <div class="testimonial">
+                <blockquote>
+                    <p>Grâce à ANIPSH-CAM, j'ai pu acquérir des compétences informatiques essentielles qui ont ouvert de nouvelles opportunités d'emploi pour moi. Je suis reconnaissant pour leur engagement envers l'inclusion numérique.</p>
+                </blockquote>
+                <cite>- Marie NWANTSA</cite>
+            </div>
+    
+            <div class="testimonial">
+                <blockquote>
+                    <p>Cette organisation a changé ma vie. Je suis une personne en situation de handicap, et ANIPSH-CAM m'a donné les moyens de devenir indépendant en utilisant la technologie. Leurs programmes sont vraiment transformateurs.</p>
+                </blockquote>
+                <cite>- DJAMILA Fabrice</cite>
+            </div>
+    
+            <div class="testimonial">
+                <blockquote>
+                    <p>ANIPSH-CAM a créé un environnement inclusif où je me sens valorisé. Leurs efforts pour sensibiliser la société aux défis auxquels nous sommes confrontés sont admirables. Je suis fier de faire partie de cette communauté.</p>
+                </blockquote>
+                <cite>- Sarah KENFACK</cite>
+            </div>
+    
+            <p>Nous sommes touchés par les paroles de nos membres et déterminés à continuer à faire une différence positive dans leurs vies.</p> <br>
+        </section>
+
+
+        <h2>Événements en vedette</h2>
+        <section class="featured-projects">
+            <div class="project-card">
+                <img src="{% static 'images/IMG_1.jpg' %}" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h2 class="project-title">CATCH-UP: Initiation à l'Informatique et la Bureautique</h2>
+                    <p class="project-description">Cet événement est un rattrapage de la formation d'initiation à l'informatique qui formera les personnes en situation de handicape aux bases de l'informatique, aux outils techniques, aux moteurs de recherche et à la navigation sur Internet.</p>
+                    <p class="project-date">Date : 15 Mai 2024</p>
+                    <p class="project-location">Lieu : Lycée Technique de Yaoundé</p>
+                    <a href="{% url 'register_event' %}" class="cta-button">S'inscrire maintenant</a>
+
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <img src="{% static 'images/IMG_3.jpg' %}" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h2 class="project-title">Webinaire sur l'accessibilité numérique</h2>
+                    <p class="project-description">Participez à notre webinaire interactif où des experts discuteront des meilleures pratiques pour rendre le contenu numérique accessible à tous.</p>
+                    <p class="project-date">Date : 10 Juillet 2024</p>
+                    <p class="project-location">En ligne</p>
+                    <a href="{% url 'register_event' %}" class="cta-button">S'inscrire maintenant</a>
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <img src="{% static 'images/IMG_4.jpg' %}" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h2 class="project-title">Formation sur l'utilisation des technologies d'assistance</h2>
+                    <p class="project-description">Découvrez comment les technologies d'assistance peuvent améliorer la vie quotidienne des personnes en situation de handicap. Formation gratuite pour tous.</p>
+                    <p class="project-date">Date : 5 Août 2024</p>
+                    <p class="project-location">Lieu : Centre de Réadaptation de Yaoundé</p>
+                    <a href="{% url 'register_event' %}" class="cta-button">S'inscrire maintenant</a>
+                </div>
+            </div>
+        
+            <!-- Add more project cards as needed -->
+        </section>
+        
+
+        <section class="newsletter-signup">
+            <h2>Inscrivez-vous à notre newsletter</h2>
+            <p>Recevez nos dernières actualités et mises à jour directement dans votre boîte de réception.</p>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Entrez votre adresse e-mail" required>
+                <button type="submit" class="cta-button">S'inscrire</button>
+            </form>
+            <p class="success-message" style="display: none;">Merci de vous être abonné!</p>
+        </section>        
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2023 O.N.I.P.S.H-CAM. All rights reserved.</p>
+            <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-service/">Terms of Service</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                displaySuccessMessage();
+            });
+
+            function displaySuccessMessage() {
+                const successMessage = document.querySelector('.success-message');
+                successMessage.style.display = 'block';
+                form.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

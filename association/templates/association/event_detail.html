@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Details</title>
+</head>
+<body>
+    <h1>Event Details</h1>
+    <p><strong>Title:</strong> {{ event.title }}</p>
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Description:</strong> {{ event.description }}</p>
+    <p><strong>Location:</strong> {{ event.location }}</p>
+    <p><strong>Event Type:</strong> {{ event.event_type }}</p>
+    <p><strong>Organizer:</strong> {{ event.organizer.name }}</p>
+    <p><strong>Attendees:</strong>
+        {% for attendee in event.attendees.all %}
+            {{ attendee.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    <a href="{% url 'event_update' event.id %}">Edit Event</a>
+    <a href="{% url 'event_delete' event.id %}">Delete Event</a>
+</body>
+</html>
